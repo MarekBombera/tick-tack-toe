@@ -93,7 +93,7 @@ export const Slider = styled.span`
 		content: '';
 		position: absolute;
 		top: 10%;
-		left: 3.5%;
+		left: 2%;
 		width: 48%;
 		height: 80%;
 		border-radius: 10px;
@@ -111,7 +111,6 @@ export const Slider = styled.span`
 export const Mark = styled.img`
 	width: 36px;
 	height: 36px;
-	margin: 0 0 0 0.5rem;
 	transition: all 0.25s;
 	filter: ${({ pickedMark }: MarkProps): string => {
 		return pickedMark ? 'var(--background-svg)' : 'var(--silver-svg)';

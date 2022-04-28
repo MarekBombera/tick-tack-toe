@@ -28,9 +28,12 @@ export const HeaderStyled = styled.div`
 		padding: 1.75rem 2rem 0rem;
 		margin-top: 3.5rem;
 	}
+	@media (min-width: 1366px) {
+		margin-top: 0;
+	}
 	@media (min-width: 1920px) {
 		width: 600px;
-		margin-top: 1.5rem;
+		margin-top: 2rem;
 	}
 `;
 

@@ -11,7 +11,7 @@ export const ScoreboardStyled = styled.div`
 	align-items: center;
 	width: 100%;
 	margin: 0 auto;
-	gap: 0.5rem;
+	gap: 0.35rem;
 	opacity: 0;
 	background: ${({ theme }): string => {
 		return theme.background;

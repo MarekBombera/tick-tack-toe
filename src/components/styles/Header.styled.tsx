@@ -15,7 +15,8 @@ export const HeaderStyled = styled.div`
 	width: 100%px;
 	height: 90px;
 	margin: 0 auto;
-	padding: 1.75rem 2rem 2rem;
+	padding: 1.75rem 1.5rem 2rem;
+
 	opacity: 0;
 	background: ${({ theme }): string => {
 		return theme.background;
@@ -43,7 +44,11 @@ export const Logo = styled.div`
 	display: flex;
 	gap: 0.5rem;
 	transition: all 0.75s ease-out;
-	justify-self: ${({ justifySelf }: LogoProps): string => justifySelf};
+	justify-self: center;
+
+	@media (min-width: 1366px) {
+		justify-self: ${({ justifySelf }: LogoProps): string => justifySelf};
+	}
 
 	& img {
 		width: 32px;
@@ -70,6 +75,7 @@ export const Turn = styled.div`
 	justify-self: center;
 	align-items: center;
 	justify-content: center;
+	margin: 0 1.75rem;
 	padding: 0.55rem 0.75rem;
 	gap: 0.5rem;
 	background: ${({ theme }): string => {

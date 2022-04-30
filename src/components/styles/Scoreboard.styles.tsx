@@ -11,7 +11,7 @@ export const ScoreboardStyled = styled.div`
 	align-items: center;
 	width: 100%;
 	margin: 0 auto;
-	padding: 0.5rem 1rem;
+	gap: 0.5rem;
 	opacity: 0;
 	background: ${({ theme }): string => {
 		return theme.background;
@@ -38,14 +38,19 @@ export const Score = styled.div`
 	justify-self: ${({ justifySelf }: ScoreProps) => justifySelf};
 	width: 96px;
 	height: 64px;
-	padding: 0 4rem;
 	background: var(--${({ bg }: ScoreProps) => bg});
 	border-radius: 10px;
 
 	@media (min-width: 768px) {
 		width: 140px;
+		height: 85px;
 		padding: 0.5rem 0rem;
 		border-radius: 15px;
+	}
+
+	@media (min-width: 1366px) {
+		width: 140px;
+		height: 75px;
 	}
 
 	@media (min-width: 1920px) {

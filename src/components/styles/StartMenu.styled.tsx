@@ -143,6 +143,7 @@ export const Button = styled.button`
 	text-transform: uppercase;
 	font-weight: 700;
 	letter-spacing: 1px;
+	color: #000000;
 	background: ${({ color }: ButtonProps): string => {
 		return color;
 	}};

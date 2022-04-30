@@ -3,6 +3,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { RootState } from '../../../reducers/';
 import { changeTurn } from '../../../actions/';
 
+import { useMediaQueryMatch } from '../../../hooks/useMediaQueryMatch/useMediaQueryMatch';
+
 import { dispatchClickedTile } from '../../../utils/dispatchClickedTile';
 import { toggleNotClickable } from '../../../utils/toggleNotClickable';
 import { TileContainer, Img } from '../../styles/Tile.styled';
@@ -51,6 +53,16 @@ export const Tile = ({ tileId }: props): JSX.Element => {
 		setHoverXO('');
 	};
 
+	const showXOMobile = () => {
+		if (XO.length === 0) return null;
+
+		return <Img src={XO} alt={XO} />;
+	};
+
+	const showXODesktop = (): JSX.Element => {
+		return <Img src={XO.length === 0 ? hoverXO : XO} alt={XO} />;
+	};
+
 	useEffect(() => {
 		if (notClickableReducer) return;
 
@@ -75,7 +87,7 @@ export const Tile = ({ tileId }: props): JSX.Element => {
 			onMouseEnter={() => handleMouseEnter()}
 			onMouseLeave={() => handleMouseLeave()}
 		>
-			<Img src={XO.length === 0 ? hoverXO : XO} alt={XO} />
+			{useMediaQueryMatch('desktop') ? showXODesktop() : showXOMobile()}
 		</TileContainer>
 	);
 };

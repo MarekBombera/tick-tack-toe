@@ -81,6 +81,7 @@ export const QuitBtn = styled.button`
 	text-transform: uppercase;
 	font-size: 1rem;
 	font-weight: 700;
+	color: black;
 	border: none;
 	border-radius: 10px;
 	box-shadow: inset 0px -4px 0px var(--shadow-silver);
@@ -105,6 +106,7 @@ export const NextRoundBtn = styled.button`
 	text-transform: uppercase;
 	font-size: 1rem;
 	font-weight: 700;
+	color: black;
 	border: none;
 	border-radius: 10px;
 	box-shadow: inset 0px -4px 0px var(--shadow-yellow);
